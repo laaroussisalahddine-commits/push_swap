@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slaarous <slaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/31 13:08:56 by slaarous          #+#    #+#             */
-/*   Updated: 2026/10/31 14:31:13 by slaarous         ###   ########.fr       */
+/*   Created: 2026/10/31 15:51:32 by slaarous          #+#    #+#             */
+/*   Updated: 2026/10/31 15:52:13 by slaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_lstdellast(p_list **lst, p_list *last_node)
+void	ft_lstadd_back(p_list **lst, p_list *new)
 {
-	p_list *current;
+	p_list	*current;
 
-	if (!lst || !*lst || !last_node)
+	if (!lst && !new)
 		return ;
-	current = *lst;
-	while(current != last_node)
+	if (!*lst)
 	{
-		if (current -> next == last_node)
-		{
-			current -> next = NULL;
-			break;
-		}
-		current = current -> next;
+		*lst = new;
+		return ;
 	}
-	free (last_node);
+	current = ft_lstlast(*lst);
+	current -> next = new;
 }

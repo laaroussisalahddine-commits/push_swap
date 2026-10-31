@@ -36,7 +36,7 @@ int main(void)
         temp = temp->next;
     }
 
-    rotate_a(&stack);
+    r_rotate_a(&stack);
 
     printf("\nAfter rotate_a:\n");
     temp = stack;
