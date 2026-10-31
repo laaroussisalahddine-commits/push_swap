@@ -6,14 +6,14 @@
 /*   By: slaarous <slaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 12:53:20 by slaarous          #+#    #+#             */
-/*   Updated: 2026/10/31 16:22:16 by slaarous         ###   ########.fr       */
+/*   Updated: 2026/10/31 16:24:59 by slaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap_s(p_list **lst)
+void	swap_s(p_list **lst,  p_list **lst1)
 {
 	swap_a(lst);
-	swap_b(lst);
+	swap_b(lst1);
 }

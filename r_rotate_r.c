@@ -6,14 +6,14 @@
 /*   By: slaarous <slaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 16:05:34 by slaarous          #+#    #+#             */
-/*   Updated: 2026/10/31 16:21:56 by slaarous         ###   ########.fr       */
+/*   Updated: 2026/10/31 16:24:47 by slaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	r_rotate_r(p_list **lst)
+void	r_rotate_r(p_list **lst, p_list **lst1)
 {
 	r_rotate_a(lst);
-	r_rotate_b(lst);
+	r_rotate_b(lst1);
 }
