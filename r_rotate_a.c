@@ -18,7 +18,7 @@ void	r_rotate_a(p_list **lst)
 	p_list	*new_node;
 	int		temp;
 
-	if (!lst || !*lst)
+	if (!lst || !*lst || ft_lstsize(*lst) == 1)
 		return ;
 	current = *lst;
 	temp = current -> content;

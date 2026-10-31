@@ -28,5 +28,13 @@ void	push_b(p_list **a, p_list **b)
 	if (!new)
 		return ;
 	ft_lstadd_front(b, new);
-	ft_lstdellast(a, last);
+	if (ft_lstsize(*a) == 1)
+	{
+		ft_lstdellast(a, last);
+		*a = NULL;
+	}
+	else
+	{
+		ft_lstdellast(a, last);
+	}
 }

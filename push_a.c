@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_a.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slaarous <slaarous@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 16:57:06 by slaarous          #+#    #+#             */
-/*   Updated: 2026/10/31 17:00:46 by slaarous         ###   ########.fr       */
+/*   Updated: 2026/10/31 18:39:21 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,13 @@ void	push_a(p_list **a, p_list **b)
 	if (!new)
 		return ;
 	ft_lstadd_front(a, new);
-	ft_lstdellast(b, last);
+	if (ft_lstsize(*b) == 1)
+	{
+		ft_lstdellast(b, last);
+		*b = NULL;
+	}
+	else
+	{
+		ft_lstdellast(b, last);
+	}
 }

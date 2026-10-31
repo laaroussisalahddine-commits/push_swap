@@ -64,7 +64,7 @@ int main(void)
         temp = temp->next;
     }
 
-	push_a(&a, &b);
+	push_b(&a, &b);
 
     printf("\n=====================After push_b2:===============\n");
 	printf("\nstack a:\n");
@@ -82,5 +82,16 @@ int main(void)
         temp = temp->next;
     }
     printf("\n");
+
+    rotate_a(&b);
+
+    printf("\n=====================After rotate_b2:===============\n");
+	printf("\nstack b:\n");
+    temp = b;
+    while (temp)
+    {
+        printf("%d ",temp->content);
+        temp = temp->next;
+    }
     return (0);
 }

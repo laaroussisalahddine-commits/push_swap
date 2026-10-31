@@ -18,7 +18,7 @@ void    swap_a(p_list **lst)
 	p_list	*node;
 	p_list	*current;
 
-	if (!lst || !*lst)
+	if (!lst || !*lst || ft_lstsize(*lst) == 1)
 		return ;
 	current = *lst;
 	last_node = ft_lstlast(current);

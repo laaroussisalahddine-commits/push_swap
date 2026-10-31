@@ -41,5 +41,6 @@ void		r_rotate_r(p_list **lst, p_list **lst1);
 void		r_rotate_b(p_list **lst);
 void        push_b(p_list **a, p_list **b);
 void	    push_a(p_list **a, p_list **b);
+unsigned int	ft_lstsize(p_list *lst);
 
 #endif

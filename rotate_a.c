@@ -19,7 +19,7 @@ void	rotate_a(p_list **lst)
 	p_list	*new_node;
 	int		tmp;
 
-	if (!lst || !*lst)
+	if (!lst || !*lst || ft_lstsize(*lst) == 1)
 		return ;
 	current = *lst;
 	last_node = ft_lstlast(current);
