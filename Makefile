@@ -5,7 +5,7 @@ AR = ar rcs
 RM = rm -f 
 
 SRC = swap_content.c swap_a.c ft_lstlast.c ft_lstadd_front.c ft_lstdelone.c \
-	ft_lstlast.c rotate_a.c swap_b.c swap_s.c
+	ft_lstlast.c rotate_a.c swap_b.c swap_s.c ft_lstnew.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -16,7 +16,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	$(AR) $(NAME) $?
 
-%.o:%.c ft_printf.h
+%.o:%.c push_swap.h
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean :

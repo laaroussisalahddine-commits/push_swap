@@ -32,5 +32,6 @@ p_list		*ft_lstlast(p_list *lst);
 void		rotate_a(p_list **lst);
 void		swap_b(p_list **lst);
 void		swap_s(p_list **lst);
+p_list	*ft_lstnew(int content);
 
 #endif

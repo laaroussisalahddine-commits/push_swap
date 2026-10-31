@@ -15,21 +15,18 @@
 void	ft_lstdellast(p_list **lst, p_list *last_node)
 {
 	p_list *current;
-	p_list *current1;
-	p_list *node;
 
 	if (!lst || !*lst || !last_node)
 		return ;
 	current = *lst;
 	while(current != last_node)
 	{
-		node = current;
-		if (current -> next = last_node)
+		if (current -> next == last_node)
 		{
 			current -> next = NULL;
 			break;
 		}
 		current = current -> next;
 	}
-	free (node);
+	free (last_node);
 }

@@ -28,7 +28,7 @@ int main(void)
     node3->next = NULL;
     stack = node1;
 
-    printf("Before swap_a:\n");
+    printf("Before rotate_a:\n");
     p_list *temp = stack;
     while (temp)
     {
@@ -38,18 +38,13 @@ int main(void)
 
     rotate_a(&stack);
 
-    printf("\nAfter swap_a:\n");
+    printf("\nAfter rotate_a:\n");
     temp = stack;
     while (temp)
     {
-        write (1, "1\n", 2);
         printf("%d ",temp->content);
         temp = temp->next;
     }
     printf("\n");
-
-    free(node1);
-    free(node2);
-    free(node3);
     return (0);
 }
