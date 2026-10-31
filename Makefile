@@ -6,7 +6,7 @@ RM = rm -f
 
 SRC = swap_content.c swap_a.c ft_lstlast.c ft_lstadd_front.c ft_lstdellast.c \
 	ft_lstlast.c rotate_a.c swap_b.c swap_s.c ft_lstnew.c rotate_a.c rotate_b.c \
-	rotate_r.c r_rotate_a.c ft_lstadd_back.c r_rotate_a.c r_rotate_b.c r_rotate_r \
+	rotate_r.c r_rotate_a.c ft_lstadd_back.c r_rotate_a.c r_rotate_b.c r_rotate_r.c \
 	
 OBJ = $(SRC:.c=.o)
 
