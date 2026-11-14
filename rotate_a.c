@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_a.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slaarous <slaarous@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 13:01:39 by slaarous          #+#    #+#             */
-/*   Updated: 2026/10/31 15:48:08 by slaarous         ###   ########.fr       */
+/*   Updated: 2026/11/14 15:40:20 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,18 @@
 
 void	rotate_a(p_list **lst)
 {
-	p_list	*last_node;
 	p_list	*current;
 	p_list	*new_node;
-	int		tmp;
+	int		temp;
 
 	if (!lst || !*lst || ft_lstsize(*lst) == 1)
 		return ;
 	current = *lst;
-	last_node = ft_lstlast(current);
-	tmp = last_node -> content;
-	new_node = ft_lstnew(tmp);
+	temp = current -> content;
+	new_node = ft_lstnew(temp);
 	if (!new_node)
 		return ;
-	ft_lstdellast(lst, last_node);
-	ft_lstadd_front(lst,new_node);
+	ft_lstadd_back(lst, new_node);
+	*lst = current -> next;
+	free(current);
 }

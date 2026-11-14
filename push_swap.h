@@ -6,7 +6,7 @@
 /*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 12:02:59 by slaarous          #+#    #+#             */
-/*   Updated: 2026/11/01 18:51:27 by yben-abd         ###   ########.fr       */
+/*   Updated: 2026/11/14 15:21:23 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,13 @@ typedef struct q_list
 {
     int                 content;
     struct q_list       *next;   
-} 
-p_list;
+} p_list;
 
 void	    	swap_content( p_list **lst1, p_list **lst2);
 void	    	swap_a(p_list **lst);
 p_list		    *ft_lstlast(p_list *lst);
 void		    ft_lstadd_front(p_list **lst, p_list *new);
-void		    ft_lstdellast(p_list **lst, p_list *last_node);
+void		    ft_lstdelfirst(p_list **lst);
 p_list		    *ft_lstlast(p_list *lst);
 void		    rotate_a(p_list **lst);
 void		    swap_b(p_list **lst);
@@ -44,5 +43,6 @@ void            push_b(p_list **a, p_list **b);
 void	        push_a(p_list **a, p_list **b);
 unsigned int	ft_lstsize(p_list *lst);
 void            simple_sort(p_list **a, p_list **b);
+void	ft_lstdellast(p_list **lst, p_list *last_node);
 
 #endif

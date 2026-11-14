@@ -4,10 +4,10 @@ FLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f 
 
-SRC = swap_content.c swap_a.c ft_lstlast.c ft_lstadd_front.c ft_lstdellast.c \
+SRC = swap_content.c swap_a.c ft_lstlast.c ft_lstadd_front.c ft_lstdelfirst.c \
 	ft_lstlast.c rotate_a.c swap_b.c swap_s.c ft_lstnew.c rotate_a.c rotate_b.c \
 	rotate_r.c r_rotate_a.c ft_lstadd_back.c r_rotate_a.c r_rotate_b.c r_rotate_r.c \
-	push_b.c push_a.c ft_lstsize.c simple_sort.c
+	push_b.c push_a.c ft_lstsize.c simple_sort.c ft_lstdellast.c
 	
 OBJ = $(SRC:.c=.o)
 
@@ -28,3 +28,7 @@ fclean : clean
 	$(RM) $(NAME)
 
 re : fclean all
+
+run : re
+	$(CC) $(FLAGS) main.c libpushswap.a
+	@$(MAKE) --no-print-directory -s clean

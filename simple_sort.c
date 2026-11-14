@@ -26,16 +26,20 @@ void simple_sort(p_list **a, p_list **b)
             push_b(a, b);
             len--;
         }
-        current = *a;
         while (*b != NULL)
         {
             current = *a;
             suiv = current->next;
             if (suiv != NULL && current->content > suiv->content)
                 swap_a(a);
-            r_rotate_b(b);
             push_a(a, b);
-            r_rotate_a(a);
+        }
+        if (*b == NULL)
+        {
+            current = *a;
+            suiv = current->next;
+            if (suiv != NULL && current->content > suiv->content)
+                swap_a(a);
         }
         current = *a;
         while (current->next != NULL && current->content < current->next->content)
