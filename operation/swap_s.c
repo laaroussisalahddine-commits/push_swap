@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   swap_s.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slaarous <slaarous@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 12:53:20 by slaarous          #+#    #+#             */
-/*   Updated: 2026/10/31 16:24:59 by slaarous         ###   ########.fr       */
+/*   Updated: 2026/11/14 16:40:46 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	swap_s(p_list **lst,  p_list **lst1)
 {

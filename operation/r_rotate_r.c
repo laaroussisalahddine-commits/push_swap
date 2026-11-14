@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   r_rotate_r.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slaarous <slaarous@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 16:05:34 by slaarous          #+#    #+#             */
-/*   Updated: 2026/10/31 16:24:47 by slaarous         ###   ########.fr       */
+/*   Updated: 2026/11/14 16:40:08 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	r_rotate_r(p_list **lst, p_list **lst1)
 {

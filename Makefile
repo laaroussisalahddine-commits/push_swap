@@ -4,10 +4,10 @@ FLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f 
 
-SRC = swap_content.c swap_a.c ft_lstlast.c ft_lstadd_front.c ft_lstdelfirst.c \
-	ft_lstlast.c rotate_a.c swap_b.c swap_s.c ft_lstnew.c rotate_a.c rotate_b.c \
-	rotate_r.c r_rotate_a.c ft_lstadd_back.c r_rotate_a.c r_rotate_b.c r_rotate_r.c \
-	push_b.c push_a.c ft_lstsize.c simple_sort.c ft_lstdellast.c
+SRC = utils/swap_content.c operation/swap_a.c utils/ft_lstlast.c utils/ft_lstadd_front.c utils/ft_lstdelfirst.c \
+	utils/ft_lstlast.c operation/rotate_a.c operation/swap_b.c operation/swap_s.c utils/ft_lstnew.c operation/rotate_a.c operation/rotate_b.c \
+	operation/rotate_r.c operation/r_rotate_a.c utils/ft_lstadd_back.c operation/r_rotate_a.c operation/r_rotate_b.c operation/r_rotate_r.c \
+	operation/push_b.c operation/push_a.c utils/ft_lstsize.c simple_sort.c utils/ft_lstdellast.c
 	
 OBJ = $(SRC:.c=.o)
 

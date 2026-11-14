@@ -6,11 +6,11 @@
 /*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 13:08:56 by slaarous          #+#    #+#             */
-/*   Updated: 2026/11/14 15:28:07 by yben-abd         ###   ########.fr       */
+/*   Updated: 2026/11/14 16:41:03 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ft_lstdelfirst(p_list **lst)
 {
