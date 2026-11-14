@@ -6,7 +6,7 @@
 /*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 12:02:59 by slaarous          #+#    #+#             */
-/*   Updated: 2026/11/14 15:21:23 by yben-abd         ###   ########.fr       */
+/*   Updated: 2026/11/14 19:03:30 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 typedef struct q_list
 {
     int                 content;
+    int                 index;
     struct q_list       *next;   
 } p_list;
 
@@ -43,6 +44,7 @@ void            push_b(p_list **a, p_list **b);
 void	        push_a(p_list **a, p_list **b);
 unsigned int	ft_lstsize(p_list *lst);
 void            simple_sort(p_list **a, p_list **b);
-void	ft_lstdellast(p_list **lst, p_list *last_node);
+void			ft_lstdellast(p_list **lst, p_list *last_node);
+void			medium_sort(p_list **a, p_list **b);
 
 #endif
