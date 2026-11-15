@@ -6,7 +6,7 @@
 /*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 12:02:59 by slaarous          #+#    #+#             */
-/*   Updated: 2026/11/15 13:06:36 by yben-abd         ###   ########.fr       */
+/*   Updated: 2026/11/15 13:15:12 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ unsigned int	ft_lstsize(t_list *lst);
 void			simple_sort(t_list **a, t_list **b);
 void			ft_lstdellast(t_list **lst, t_list *last_node);
 void			medium_sort(t_list **a);
+int				calculate_sqrt(int nb);
 
 #endif

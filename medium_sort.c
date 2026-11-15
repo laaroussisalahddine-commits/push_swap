@@ -6,7 +6,7 @@
 /*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 17:08:33 by yben-abd          #+#    #+#             */
-/*   Updated: 2026/11/15 13:08:31 by yben-abd         ###   ########.fr       */
+/*   Updated: 2026/11/15 13:54:36 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,38 @@
 
 static void	find_min(t_list *lst, int index)
 {
-	t_list	*current;
-	t_list	*tmp;
-	long	min;
-	int		i;
+	t_list		*current;
+	t_list		*tmp;
+	long		min;
 
-	current = lst;
 	tmp = lst;
-	if (tmp-> index == -1)
-		min = tmp-> content;
-	else
-		min = tmp -> next-> content;
-	i = 0;
-	while (i < ft_lstsize(lst) - 1)
+	while (tmp && tmp->index != -1)
+		tmp = tmp->next;
+	if (!tmp)
+		return ;
+	min = tmp->content;
+	current = tmp;
+	tmp = lst;
+	while (tmp)
 	{
-		tmp = tmp -> next;
-		if (min > tmp -> content && tmp->index == -1)
+		if (tmp->index == -1 && min > tmp->content)
 		{
-			min = tmp -> content;
+			min = tmp->content;
 			current = tmp;
 		}
-		i++;
+		tmp = tmp->next;
 	}
 	current->index = index;
 }
 
 void	medium_sort(t_list **a)
 {
-	int	i;
-	int	index;
+	unsigned int	i;
 
-	index = 0;
 	i = 0;
-	while (i < 3)
+	while (i < ft_lstsize(*a))
 	{
-		find_min(*a, index);
-		index++;
+		find_min(*a, i);
 		i++;
 	}
 }
