@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
+/*   By: slaarous <slaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 12:02:59 by slaarous          #+#    #+#             */
-/*   Updated: 2026/11/15 13:15:12 by yben-abd         ###   ########.fr       */
+/*   Updated: 2026/11/15 16:08:51 by slaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,9 @@ void			push_a(t_list **a, t_list **b);
 unsigned int	ft_lstsize(t_list *lst);
 void			simple_sort(t_list **a, t_list **b);
 void			ft_lstdellast(t_list **lst, t_list *last_node);
-void			medium_sort(t_list **a);
+void			medium_sort(t_list **a, t_list **b);
 int				calculate_sqrt(int nb);
+int				find_pos(t_list *lst, int index);
+void			find_min(t_list *lst, int index);
 
 #endif

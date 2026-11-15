@@ -2,51 +2,65 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	main(void)
+static t_list *new_node(int value)
 {
-	t_list	*a;
-	t_list	*current;
-	t_list	*new_node;
-	int		numbers[] = {5, -3, 10, -8, 0, 2, -15, 7};
-	int		i;
+    t_list *node;
 
-	a = NULL;
-	i = 0;
-	while (i < 8)
-	{
-		new_node = malloc(sizeof(t_list));
-		if (!new_node)
-			return (1);
-		new_node->content = numbers[i];
-		new_node->index = -1;
-		new_node->next = NULL;
-		ft_lstadd_back(&a, new_node);
-		i++;
-	}
-    puts("==============head==========");
-    current = a;
-    while (current)
-	{
-		printf("%d->", current->content);
-		current = current->next;
-	}
-	printf("\nBEFORE medium_sort:\n");
-	current = a;
-	while (current)
-	{
-		printf("Value: %d | Index: %d\n", current->content, current->index);
-		current = current->next;
-	}
+    node = malloc(sizeof(t_list));
+    if (!node)
+        return (NULL);
+    node->content = value;
+    node->index = -1;
+    node->next = NULL;
+    return (node);
+}
 
-	medium_sort(&a);
+static void print_stack(char *name, t_list *lst)
+{
+    printf("\n%s:\n", name);
+    while (lst)
+    {
+        printf("Value: %d | Index: %d\n",
+            lst->content, lst->index);
+        lst = lst->next;
+    }
+}
 
-	printf("\nAFTER medium_sort:\n");
-	current = a;
-	while (current)
-	{
-		printf("Value: %d | Index: %d\n", current->content, current->index);
-		current = current->next;
-	}
+static void free_stack(t_list *lst)
+{
+    t_list *tmp;
 
-	return (0);
+    while (lst)
+    {
+        tmp = lst->next;
+        free(lst);
+        lst = tmp;
+    }
+}
+
+int main(void)
+{
+    t_list *a;
+    t_list *b;
+
+    a = new_node(40);
+    a->next = new_node(10);
+    a->next->next = new_node(50);
+    a->next->next->next = new_node(20);
+    a->next->next->next->next = new_node(30);
+    b = NULL;
+
+    printf("========== BEFORE SORT ==========\n");
+    print_stack("Stack A", a);
+    print_stack("Stack B", b);
+
+    medium_sort(&a, &b);
+
+    printf("\n========== AFTER SORT ==========\n");
+    print_stack("Stack A", a);
+    print_stack("Stack B", b);
+
+    free_stack(a);
+    free_stack(b);
+    return (0);
 }
