@@ -6,16 +6,16 @@
 /*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 13:01:39 by slaarous          #+#    #+#             */
-/*   Updated: 2026/11/14 16:40:14 by yben-abd         ###   ########.fr       */
+/*   Updated: 2026/11/15 13:05:00 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	rotate_a(p_list **lst)
+void	rotate_a(t_list **lst)
 {
-	p_list	*current;
-	p_list	*new_node;
+	t_list	*current;
+	t_list	*new_node;
 	int		temp;
 
 	if (!lst || !*lst || ft_lstsize(*lst) == 1)

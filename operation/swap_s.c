@@ -6,13 +6,13 @@
 /*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 12:53:20 by slaarous          #+#    #+#             */
-/*   Updated: 2026/11/14 16:40:46 by yben-abd         ###   ########.fr       */
+/*   Updated: 2026/11/15 13:05:22 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	swap_s(p_list **lst,  p_list **lst1)
+void	swap_s(t_list **lst, t_list **lst1)
 {
 	swap_a(lst);
 	swap_b(lst1);

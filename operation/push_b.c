@@ -6,18 +6,18 @@
 /*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 16:28:14 by slaarous          #+#    #+#             */
-/*   Updated: 2026/11/14 16:39:55 by yben-abd         ###   ########.fr       */
+/*   Updated: 2026/11/15 13:04:39 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	push_b(p_list **a, p_list **b)
+void	push_b(t_list **a, t_list **b)
 {
-	p_list *current;
-	p_list *new;
-	int tmp;
-	
+	t_list	*current;
+	t_list	*new;
+	int		tmp;
+
 	if (!a || !*a)
 		return ;
 	current = *a;

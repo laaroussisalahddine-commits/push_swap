@@ -6,15 +6,15 @@
 /*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 13:08:03 by slaarous          #+#    #+#             */
-/*   Updated: 2026/11/14 16:40:57 by yben-abd         ###   ########.fr       */
+/*   Updated: 2026/11/15 13:05:36 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_lstadd_front(p_list **lst, p_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	p_list	*current;
+	t_list	*current;
 
 	if (!lst || !new)
 		return ;

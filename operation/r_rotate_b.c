@@ -6,13 +6,13 @@
 /*   By: yben-abd <yben-abd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 16:04:12 by slaarous          #+#    #+#             */
-/*   Updated: 2026/11/14 16:40:04 by yben-abd         ###   ########.fr       */
+/*   Updated: 2026/11/15 13:04:51 by yben-abd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	r_rotate_b(p_list **lst)
+void	r_rotate_b(t_list **lst)
 {
 	r_rotate_a(lst);
 }
